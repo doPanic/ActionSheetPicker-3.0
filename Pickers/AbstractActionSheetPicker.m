@@ -440,7 +440,8 @@ CG_INLINE BOOL isIPhone4()
 
 - (void) didRotate:(NSNotification *)notification
 {
-    [self dismissPicker];
+    // FIX: don't dismiss on orientation change! that's just weird.
+    // [self dismissPicker];
 }
 
 - (void)presentActionSheet:(SWActionSheet *)actionSheet
